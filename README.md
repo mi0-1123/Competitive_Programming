@@ -1,1 +1,3 @@
-# Sports_programming
+# Sports_programmin
+あくまで競プロで用いたコードです。
+インデントがおかしいとか中括弧つけろとか汚いとかはうけつけません
