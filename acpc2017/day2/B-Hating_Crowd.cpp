@@ -11,7 +11,7 @@ int main(){
     vector<int> m(n),d(n),v(n),s(n),st(n);
     //vector<int> frg(361,0);
     for(int i=0;i<n;i++){
-        cin >> m[i] >> d[i] >> v[i] >> s[i];
+        cin >> m[i] >> d[i] >> s[i] >> v[i];
         st[i]=(m[i]-1)*30+d[i];
     }
     for(int i=0;i<n;i++){
