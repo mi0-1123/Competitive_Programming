@@ -1,20 +1,23 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
+#include <tuple>
 using namespace std;
 
 int main(){
     int n;
     cin >> n;
-    vector<pair<int,int> > day;
+    vector<tuple<int,int,int> > day;
     day.resize(n);
     for(int i=0;i<n;i++){
-        cin >> day[i].first >> day[i].second;
+        int st,en;
+        cin >> st >> en;
+        day[i] = make_tuple(en-st+1, st-1, en-1);
     }
     sort(day.begin(),day.end());
     int hpdy[31]={};
-    for(pair<int,int>p:day){
-        for(int i=p.first-1;i<p.second;i++){
+    for(tuple<int,int,int>p:day){
+        for(int i=get<1>(p);i<=get<2>(p);i++){
             if(hpdy[i]==0){
                 hpdy[i]=1;
                 break;
