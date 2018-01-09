@@ -18,6 +18,7 @@ int main(){
                     if(s[i]==atmk[j])flg=true;
                 }
             }
+            if(!flg)break;
         }
     }
 
