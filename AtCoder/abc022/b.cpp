@@ -7,14 +7,14 @@ using namespace std;
 int main(){
     int n;
     cin >> n;
-    vector<int> table(100000,0);
+    vector<int> table(100001,0);
     int a;
     Rep(i,n){
         cin >> a;
         table[a]++;
     }
     int sum=0;
-    Rep(i,100000){
+    Rep(i,100001){
         if(table[i]>1)sum+=table[i]-1;
     }
     cout << sum << endl;
