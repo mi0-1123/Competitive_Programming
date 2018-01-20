@@ -14,7 +14,7 @@ int main(){
 //       l--;
 //       r--;
     //sort(s[l],s[l]+r-l);
-       sort(s.begin()+l,s.begin()+r);
+       reverse(s.begin()+l-1,s.begin()+r);
     }
     cout << s << endl;
 }
