@@ -16,29 +16,29 @@ int main(){
     cin >> n >> m;
 
     int y=4;
-    int o=2;
+    int g=2;
 
     int ya,ol,gy;
     int flg=1;
     REP(i,n+1){
-       int num=y*i+o*(n-i);
+       int num=y*i+g*(n-i);
        if(num==m){
            flg=0;
            ya=i;
-           ol=(n-i);
-           gy=0;
+           gy=(n-i);
+           ol=0;
            break;
        }
     }
     if(flg){
         m-=3;
         REP(i,n){
-            int num=y*i+o*(n-i);
+            int num=y*i+g*(n-1-i);
             if(num==m){
                 flg=0;
                 ya=i;
-                ol=n-i;
-                gy=1;
+                gy=n-1-i;
+                ol=1;
                 break;
             }
         }
