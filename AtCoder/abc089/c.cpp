@@ -25,15 +25,16 @@ int main(){
                 break;
             }
         }
+        s="";
     }
+
+    //REP(i,5)cout << vc[i] << endl;
     unsigned Int ans=0;
 
     for(int i=0;i<5;i++){
         for(int j=i+1;j<5;j++){
             for(int k=j+1;k<5;k++){
-                if(vc[i]*vc[j]*vc[k]){
-                    ans+=vc[i]*vc[j]*vc[k];
-                }
+                ans+=vc[i]*vc[j]*vc[k];
             }
         }
     }
