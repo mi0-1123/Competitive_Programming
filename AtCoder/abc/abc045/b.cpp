@@ -11,23 +11,26 @@ using namespace std;
 #define All(v) v.begin(),v.end()
 typedef long long ll;
 
-vector<string> s(3);
-int n[3];
-
-char nextch(char ch){
-    n[ch-'a']--;
-    if(n[ch-'a']==0){
-        return ch-'a'+'A';
-    }else{
-        return s[]
-    }
-
-}
-
 int main(){
-    cin >> s[0] >> s[1] >> s[2];
-    n[0]=s[0].size();
-    n[1]=s[1].size();
-    n[2]=s[2].size();
-    char ans=nextch(s[0][0]);
+    ios::sync_with_stdio(false);
+    string sa,sb,sc;
+    cin >> sa >> sb >> sc;
+    int a,b,c;
+    a=b=c=0;
+    int next=0;
+    while(sa.size()+1!=a&&sb.size()+1!=b&&sc.size()+1!=c){
+        if(next==0){
+            next=sa[a]-'a';
+            a++;
+        }else if(next==1){
+            next=sb[b]-'a';
+            b++;
+        }else{
+            next=sc[c]-'a';
+            c++;
+        }
+    }
+    if(sa.size()+1==a)cout << "A" << endl;
+    else if(sb.size()+1==b)cout << "B" << endl;
+    else cout << "C" << endl;
 }
