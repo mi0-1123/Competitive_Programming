@@ -1,8 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define REP(i,n) for(int i=0;i<(n);i++)
-#define REAP(i,a,n) for(int i=(a);i<(n);i++)
+#define REP(i,n) for(ll i=0;i<(n);i++)
+#define REAP(i,a,n) for(ll i=(a);i<(n);i++)
 #define YES cout<<"Yes"<<endl
 #define NO cout<<"No"<<endl
 #define fr first
@@ -11,13 +11,12 @@ using namespace std;
 #define All(v) v.begin(),v.end()
 typedef long long ll;
 
-int rd[101][101];
+ll rd[101][101];
 
-void solve(int n){
-
-    for(int k=0;k<n;k++){
-        for(int i=0;i<n;i++){
-            for(int j=0;j<n;j++){
+void solve(ll n){
+    for(ll k=0;k<n;k++){
+        for(ll i=0;i<n;i++){
+            for(ll j=0;j<n;j++){
                 rd[i][j]=min(rd[i][j],rd[i][k]+rd[k][j]);
             }
         }
@@ -36,12 +35,12 @@ void init(){
 
 int main(){
     ios::sync_with_stdio(false);
-    int n,m,s,g1,g2;
+    ll n,m,s,g1,g2;
     while(cin>>n>>m>>s>>g1>>g2,n){
         s--;
         g1--;
         g2--;
-        int a,b,c;
+        ll a,b,c;
         init();
         REP(k,m){
             cin >> a >> b >> c;
@@ -50,6 +49,11 @@ int main(){
             rd[a][b]=c;
         }
         solve(n);
-        cout << rd[s][g1]+rd[s][g2] << endl;
+
+        ll res=INT_MAX;
+        for(ll i=0;i<n;i++){
+            res = min(res, rd[s][i]+rd[i][g1]+rd[i][g2]);
+        }
+        cout << res << endl;
     }
 }
