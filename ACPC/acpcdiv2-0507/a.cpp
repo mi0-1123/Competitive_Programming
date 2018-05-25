@@ -12,6 +12,9 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    int a,b;
+    REP(i,7){
+        cin >> a >> b;
+        cout << a-b << endl;
+    }
 }

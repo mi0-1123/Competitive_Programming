@@ -12,6 +12,9 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    int a,b,c,d,p;
+    cin >> a >> b >> c >> d >> p;
+    int x=p*a;
+    int y=p>c?b+(p-c)*d:b;
+    cout << min(x,y) << endl;
 }

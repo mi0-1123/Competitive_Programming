@@ -12,6 +12,11 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    string s;
+    cin >> s;
+    int sum=700;
+    REP(i,3){
+        if(s[i]=='o')sum+=100;
+    }
+    cout << sum <<endl;
 }

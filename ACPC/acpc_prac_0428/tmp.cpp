@@ -11,7 +11,3 @@ using namespace std;
 #define All(v) v.begin(),v.end()
 typedef long long ll;
 
-int main(){
-    ios::sync_with_stdio(false);
-
-}

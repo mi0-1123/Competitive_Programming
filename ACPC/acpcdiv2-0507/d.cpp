@@ -12,6 +12,17 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    int n;
+    while(cin >> n,n){
+        int k;
+        int res=0;
+        bool flg=false;
+        REP(i,n){
+            cin >> k;
+            if(k>0)res++;
+            if(k>1)flg=true;
+        }
+        if(flg)cout << res+1 << endl;
+        else cout << "NA" << endl;
+    }
 }

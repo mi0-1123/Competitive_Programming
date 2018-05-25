@@ -12,6 +12,12 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    int t,n;
+    REP(i,4){
+        cin >> t >> n;
+        if(t==1)cout << n*6000 << endl;
+        else if(t==2)cout << n*4000 << endl;
+        else if(t==3)cout << 3000*n<< endl;
+        else cout << 2000*n << endl;
+    }
 }

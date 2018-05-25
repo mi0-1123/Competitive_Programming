@@ -13,5 +13,19 @@ typedef long long ll;
 
 int main(){
     ios::sync_with_stdio(false);
-
+    int n,t;
+    cin >> n >> t;
+    int a[100001]={};
+    int l,r;
+    REP(i,n){
+        cin >> l >> r;
+        a[l]+=1;
+        a[r]+=-1;
+    }
+    int ma=a[0];
+    REAP(i,1,100001){
+        a[i]+=a[i-1];
+        ma=max(ma,a[i]);
+    }
+    cout << ma << endl;
 }

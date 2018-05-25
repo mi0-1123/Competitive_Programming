@@ -12,6 +12,15 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    int a,b,c,d,e;
+    cin >> a >> b >> c >> d >> e;
+    int t=0;
+    if(a<0){
+        t+=abs(a)*c;
+        t+=d;
+        t+=b*e;
+    }else{
+        t+=(b-a)*e;
+    }
+    cout << t << endl;
 }

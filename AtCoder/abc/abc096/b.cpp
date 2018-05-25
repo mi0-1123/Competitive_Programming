@@ -12,6 +12,13 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    int a,b,c;
+    cin >> a >> b >> c;
+    int k;
+    cin >> k;
+    int sum=a+b+c;
+    int ma=max(a,max(b,c));
+    sum-=ma;
+    REP(i,k)ma*=2;
+    cout << sum+ma << endl;
 }

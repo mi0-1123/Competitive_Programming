@@ -14,4 +14,13 @@ typedef long long ll;
 int main(){
     ios::sync_with_stdio(false);
 
+    int sum;
+    while(cin >> sum,sum){
+        int a;
+        REP(i,9){
+            cin >> a;
+            sum-=a;
+        }
+        cout << sum << endl;
+    }
 }

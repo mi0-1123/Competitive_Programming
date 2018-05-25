@@ -12,6 +12,18 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
+   int n;
+   cin >> n;
+   int x,y,b,p;
+   int sum1,sum2;
+   REP(i,n){
+       cin >> x >> y >> b >> p;
 
+       sum1=((x*5+y*2)*8)/10;
+       if(b>5)sum1+=(x*(b-5)*8)/10;
+       if(p>2)sum1+=(y*(p-2)*8)/10;
+
+       sum2=x*b+y*p;
+       cout << min(sum1,sum2) << endl;
+   }
 }

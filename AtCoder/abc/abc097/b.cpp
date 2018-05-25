@@ -13,5 +13,17 @@ typedef long long ll;
 
 int main(){
     ios::sync_with_stdio(false);
+    int x;
+    cin >> x;
+    int ans=1;
+    for(int i=1;i<=x;i++){
+        for(int j=2;j<6;j++){
+            int a=(int)pow(i,j);
+            if(a<=x){
+                ans=max(ans,a);
+            }
+        }
+    }
 
+    cout << ans << endl;
 }

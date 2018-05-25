@@ -12,6 +12,9 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    vector<int> e(4);
+    for(int i=0;i<4;i++)cin >> e[i];
+    sort(All(e));
+    if(e[0]==e[1]&&e[2]==e[3])cout << "yes" << endl;
+    else cout << "no" << endl;
 }

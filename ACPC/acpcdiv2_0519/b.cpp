@@ -13,5 +13,12 @@ typedef long long ll;
 
 int main(){
     ios::sync_with_stdio(false);
-
+    int n;
+    cin >> n;
+    int k,p;
+    REP(i,n){
+        cin >> k >> p;
+        k--;
+        cout << k%p+1 << endl;
+    }
 }

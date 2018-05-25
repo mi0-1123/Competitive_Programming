@@ -13,5 +13,8 @@ typedef long long ll;
 
 int main(){
     ios::sync_with_stdio(false);
-
+    int a,b,c,d;
+    cin >> a>> b >> c >> d;
+    if(abs(a-b)<=d&&abs(b-c)<=d || abs(a-c)<=d)YES;
+    else NO;
 }

@@ -12,6 +12,20 @@ using namespace std;
 typedef long long ll;
 
 int main(){
-    ios::sync_with_stdio(false);
-
+    int n,m,t;
+    cin >> n >> m >> t;
+    int a;
+    vector<int> tim(t,1);
+    REP(i,n){
+        cin >> a;
+        a--;
+        for(int j=a-m+1;j<=a+m&&j<t;j++){
+            tim[j]=0;
+        }
+    }
+    int sum=0;
+    REP(i,t){
+        sum+=tim[i];
+    }
+    cout << sum << endl;
 }
