@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-    
+
 struct Card{
-    int num;    
+    int num;
     char ch;
 
     bool operator < (const Card card){
